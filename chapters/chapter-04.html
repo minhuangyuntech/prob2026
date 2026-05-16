@@ -37,17 +37,14 @@
         </div>
       </section>
 
-      <section id="toc" class="section section-light">
-        <div class="section-inner">
-          <div class="section-heading-row">
-            <div>
-              <p class="section-kicker">Contents</p>
-              <h2>第 4 章節次</h2>
-            </div>
-            <p class="heading-note">
-              以下依照教材目錄製作節次連結，點選標題即可跳到該節的基本內容。
+      <section class="section section-light chapter-material" aria-label="第 4 章節次與內容">
+        <div class="section-inner chapter-layout">
+          <aside id="toc" class="chapter-sidebar">
+            <p class="section-kicker">Contents</p>
+            <h2>第 4 章節次</h2>
+            <p>
+              以下依照教材目錄製作節次連結。點選標題即可跳到該節的基本內容；頁碼保留作為對照教材時的索引。
             </p>
-          </div>
 
           <nav class="toc-panel" aria-label="第 4 章節次連結">
             <a href="#section-4-1">
@@ -111,13 +108,31 @@
               <em>215</em>
             </a>
           </nav>
-        </div>
-      </section>
+          </aside>
 
-      <section id="content" class="section">
-        <div class="section-inner">
-          <p class="section-kicker">Core Notes</p>
-          <h2>本章基本內容</h2>
+          <div id="content" class="chapter-main">
+          <div class="chapter-main-header">
+            <p class="section-kicker">Core Notes</p>
+            <h2>本章基本內容</h2>
+            <p>
+              本章的核心任務，是把一個隨機量從「如何描述」推進到「如何計算、轉換、模擬與解釋」。閱讀時可把每一節都放回 CDF、PDF、期望值與工程意義之間的關係來理解。
+            </p>
+          </div>
+
+          <div class="chapter-note-grid" aria-label="第 4 章學習重點">
+            <div>
+              <strong>描述分布</strong>
+              <span>CDF、PDF、常見連續分布與參數意義。</span>
+            </div>
+            <div>
+              <strong>計算特徵</strong>
+              <span>期望值、變異數、動差與機率界限。</span>
+            </div>
+            <div>
+              <strong>工程應用</strong>
+              <span>可靠度、亂數模擬、entropy 與不確定性解釋。</span>
+            </div>
+          </div>
 
           <div class="content-stack">
             <article id="section-4-1" class="lesson-section">
@@ -215,6 +230,7 @@
                 練習題應優先掌握三類能力：由 CDF 或 PDF 計算機率與期望值、辨識常見連續分布的工程意義，以及處理隨機變數轉換與基本可靠度問題。
               </p>
             </article>
+          </div>
           </div>
         </div>
       </section>
