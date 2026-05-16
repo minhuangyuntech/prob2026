@@ -340,14 +340,14 @@ a {
 }
 
 .topic-card h3,
-.schedule-list h3 {
+.chapter-list h3 {
   margin: 0 0 10px;
   font-size: 1.28rem;
   line-height: 1.2;
 }
 
 .topic-card p,
-.schedule-list p {
+.chapter-list p {
   margin: 0;
   color: var(--muted);
 }
@@ -366,29 +366,29 @@ a {
   text-align: right;
 }
 
-.schedule-list {
+.chapter-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 1px solid var(--line);
 }
 
-.schedule-list article {
+.chapter-list article {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
+  grid-template-columns: 112px minmax(0, 1fr);
   gap: 20px;
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.schedule-list span {
+.chapter-list span {
   grid-row: 1 / span 2;
   color: var(--teal);
   font-size: 0.88rem;
   font-weight: 800;
 }
 
-.schedule-list h3,
-.schedule-list p {
+.chapter-list h3,
+.chapter-list p {
   grid-column: 2;
 }
 
@@ -457,7 +457,7 @@ a {
 
   .course-summary,
   .topic-grid,
-  .schedule-list {
+  .chapter-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -497,7 +497,7 @@ a {
 
   .course-summary,
   .topic-grid,
-  .schedule-list,
+  .chapter-list,
   .assessment-grid {
     grid-template-columns: 1fr;
   }
@@ -507,14 +507,14 @@ a {
     flex-direction: column;
   }
 
-  .schedule-list article {
+  .chapter-list article {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  .schedule-list span,
-  .schedule-list h3,
-  .schedule-list p {
+  .chapter-list span,
+  .chapter-list h3,
+  .chapter-list p {
     grid-column: auto;
     grid-row: auto;
   }
