@@ -275,6 +275,32 @@ a {
   font-size: 1.05rem;
 }
 
+.chapter-hero {
+  padding: clamp(76px, 10vw, 132px) clamp(20px, 5vw, 72px);
+  color: white;
+  background:
+    linear-gradient(120deg, rgba(19, 78, 74, 0.96), rgba(47, 111, 159, 0.9)),
+    #17373a;
+}
+
+.chapter-hero-inner {
+  max-width: 900px;
+}
+
+.chapter-hero h1 {
+  max-width: 860px;
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.chapter-hero p:not(.section-kicker) {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
 .textbook-panel {
   padding: clamp(24px, 4vw, 36px);
   background: #17373a;
@@ -392,6 +418,110 @@ a {
   grid-column: 2;
 }
 
+.chapter-list h3 a {
+  color: var(--teal-deep);
+  border-bottom: 2px solid rgba(15, 118, 110, 0.28);
+}
+
+.chapter-list h3 a:hover,
+.chapter-list h3 a:focus-visible {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+  outline: none;
+}
+
+.toc-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toc-panel a {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 46px;
+  gap: 18px;
+  align-items: center;
+  min-height: 70px;
+  padding: 16px 18px;
+  background: var(--surface);
+}
+
+.toc-panel a:hover,
+.toc-panel a:focus-visible {
+  background: #eef7f4;
+  outline: none;
+}
+
+.toc-panel span {
+  color: var(--teal);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.toc-panel strong {
+  line-height: 1.25;
+}
+
+.toc-panel em {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: normal;
+  text-align: right;
+}
+
+.content-stack {
+  display: grid;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.lesson-section {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 20px;
+  padding: clamp(22px, 4vw, 34px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(23, 35, 41, 0.07);
+  scroll-margin-top: 96px;
+}
+
+.lesson-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  min-height: 42px;
+  padding: 8px;
+  color: white;
+  background: var(--blue);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.lesson-section h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.lesson-section p {
+  grid-column: 2;
+  margin: 0;
+}
+
+.lesson-summary .lesson-number {
+  background: var(--amber);
+}
+
 .assessment-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -461,6 +591,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .toc-panel {
+    grid-template-columns: 1fr;
+  }
+
   .two-column {
     grid-template-columns: 1fr;
   }
@@ -517,5 +651,18 @@ a {
   .chapter-list p {
     grid-column: auto;
     grid-row: auto;
+  }
+
+  .toc-panel a {
+    grid-template-columns: 64px minmax(0, 1fr) 42px;
+    gap: 12px;
+  }
+
+  .lesson-section {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-section p {
+    grid-column: auto;
   }
 }

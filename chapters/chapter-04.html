@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Probability 2026 第 4 章 One Random Variable 的節次連結與課程基本內容。"
+    >
+    <title>Chapter 4 | One Random Variable</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="課程導覽">
+      <a class="brand" href="../index.html#top" aria-label="Probability 2026 首頁">
+        <span class="brand-mark">P</span>
+        <span>
+          <strong>Probability 2026</strong>
+          <small>Chapter 4</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a href="../index.html#chapters">所有章節</a>
+        <a href="#toc">節次</a>
+        <a href="#content">內容</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="chapter-hero" aria-labelledby="chapter-title">
+        <div class="section-inner chapter-hero-inner">
+          <p class="section-kicker">Chapter 4</p>
+          <h1 id="chapter-title">One Random Variable</h1>
+          <p>
+            本章把焦點放在單一隨機變數的完整描述方式：從累積分布函數、機率密度函數、期望值與常見連續分布開始，再進一步處理函數轉換、不等式、轉換方法、可靠度、亂數產生與 entropy。
+          </p>
+        </div>
+      </section>
+
+      <section id="toc" class="section section-light">
+        <div class="section-inner">
+          <div class="section-heading-row">
+            <div>
+              <p class="section-kicker">Contents</p>
+              <h2>第 4 章節次</h2>
+            </div>
+            <p class="heading-note">
+              以下依照教材目錄製作節次連結，點選標題即可跳到該節的基本內容。
+            </p>
+          </div>
+
+          <nav class="toc-panel" aria-label="第 4 章節次連結">
+            <a href="#section-4-1">
+              <span>4.1</span>
+              <strong>The Cumulative Distribution Function</strong>
+              <em>141</em>
+            </a>
+            <a href="#section-4-2">
+              <span>4.2</span>
+              <strong>The Probability Density Function</strong>
+              <em>148</em>
+            </a>
+            <a href="#section-4-3">
+              <span>4.3</span>
+              <strong>The Expected Value of X</strong>
+              <em>155</em>
+            </a>
+            <a href="#section-4-4">
+              <span>4.4</span>
+              <strong>Important Continuous Random Variables</strong>
+              <em>163</em>
+            </a>
+            <a href="#section-4-5">
+              <span>4.5</span>
+              <strong>Functions of a Random Variable</strong>
+              <em>174</em>
+            </a>
+            <a href="#section-4-6">
+              <span>4.6</span>
+              <strong>The Markov and Chebyshev Inequalities</strong>
+              <em>181</em>
+            </a>
+            <a href="#section-4-7">
+              <span>4.7</span>
+              <strong>Transform Methods</strong>
+              <em>184</em>
+            </a>
+            <a href="#section-4-8">
+              <span>4.8</span>
+              <strong>Basic Reliability Calculations</strong>
+              <em>189</em>
+            </a>
+            <a href="#section-4-9">
+              <span>4.9</span>
+              <strong>Computer Methods for Generating Random Variables</strong>
+              <em>194</em>
+            </a>
+            <a href="#section-4-10">
+              <span>4.10</span>
+              <strong>Entropy</strong>
+              <em>202</em>
+            </a>
+            <a href="#summary">
+              <span>Summary</span>
+              <strong>Chapter Summary</strong>
+              <em>213</em>
+            </a>
+            <a href="#problems">
+              <span>Problems</span>
+              <strong>Practice Problems</strong>
+              <em>215</em>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section id="content" class="section">
+        <div class="section-inner">
+          <p class="section-kicker">Core Notes</p>
+          <h2>本章基本內容</h2>
+
+          <div class="content-stack">
+            <article id="section-4-1" class="lesson-section">
+              <span class="lesson-number">4.1</span>
+              <h3>The Cumulative Distribution Function</h3>
+              <p>
+                累積分布函數 CDF 描述隨機變數小於或等於某個數值的機率，是連續、離散與混合型隨機變數都能使用的統一表示法。學習重點包含 CDF 的單調性、極限行為，以及如何由 CDF 讀出區間機率。
+              </p>
+            </article>
+
+            <article id="section-4-2" class="lesson-section">
+              <span class="lesson-number">4.2</span>
+              <h3>The Probability Density Function</h3>
+              <p>
+                機率密度函數 PDF 用來描述連續隨機變數的機率分布形狀。這一節會強調密度不是單點機率，而是透過積分取得區間機率，並連結 CDF 與 PDF 之間的微分與積分關係。
+              </p>
+            </article>
+
+            <article id="section-4-3" class="lesson-section">
+              <span class="lesson-number">4.3</span>
+              <h3>The Expected Value of X</h3>
+              <p>
+                期望值提供隨機變數的平均趨勢，變異數與標準差則描述分散程度。課程會把 mean、moment、variance、standard deviation 與工程量測中的平均功率、雜訊強度等概念連在一起。
+              </p>
+            </article>
+
+            <article id="section-4-4" class="lesson-section">
+              <span class="lesson-number">4.4</span>
+              <h3>Important Continuous Random Variables</h3>
+              <p>
+                這一節整理常見連續分布，例如 uniform、exponential、Gaussian、Erlang 等。重點不只是記公式，而是理解每個分布適合描述哪一類工程現象，以及其參數如何影響分布形狀。
+              </p>
+            </article>
+
+            <article id="section-4-5" class="lesson-section">
+              <span class="lesson-number">4.5</span>
+              <h3>Functions of a Random Variable</h3>
+              <p>
+                當隨機變數經過函數轉換後，新的隨機變數也會產生新的分布。學習重點包括單調轉換、多對一轉換，以及用 CDF 或 PDF 方法求出轉換後的分布。
+              </p>
+            </article>
+
+            <article id="section-4-6" class="lesson-section">
+              <span class="lesson-number">4.6</span>
+              <h3>The Markov and Chebyshev Inequalities</h3>
+              <p>
+                Markov 與 Chebyshev 不等式提供在分布資訊不足時估計尾端機率的方法。這類界限常用來判斷偏離平均值的機率上限，是理解可靠度、風險與長期平均的重要工具。
+              </p>
+            </article>
+
+            <article id="section-4-7" class="lesson-section">
+              <span class="lesson-number">4.7</span>
+              <h3>Transform Methods</h3>
+              <p>
+                轉換方法把分布資訊轉到另一個表示空間，例如 moment-generating function 或 characteristic function。它能簡化期望值、動差與隨機變數和的分析。
+              </p>
+            </article>
+
+            <article id="section-4-8" class="lesson-section">
+              <span class="lesson-number">4.8</span>
+              <h3>Basic Reliability Calculations</h3>
+              <p>
+                可靠度計算把隨機變數用在元件壽命、失效率與系統存活機率上。這一節會把 CDF、survival function 與 exponential lifetime model 連結到工程系統可靠度。
+              </p>
+            </article>
+
+            <article id="section-4-9" class="lesson-section">
+              <span class="lesson-number">4.9</span>
+              <h3>Computer Methods for Generating Random Variables</h3>
+              <p>
+                電腦模擬需要能產生符合指定分布的樣本。本節介紹由 uniform random number 出發的產生方法，包含 inverse transform 的核心觀念與模擬驗證。
+              </p>
+            </article>
+
+            <article id="section-4-10" class="lesson-section">
+              <span class="lesson-number">4.10</span>
+              <h3>Entropy</h3>
+              <p>
+                Entropy 衡量隨機變數的不確定性，也連結資訊量與編碼效率。這一節會以直覺、公式與簡單分布例子說明 entropy 如何反映資料的不確定程度。
+              </p>
+            </article>
+
+            <article id="summary" class="lesson-section lesson-summary">
+              <span class="lesson-number">Summary</span>
+              <h3>Chapter Summary</h3>
+              <p>
+                第 4 章完成從單一隨機變數的分布描述、期望與變異，到轉換、可靠度、模擬與 entropy 的基礎地圖。這些工具會在後續多變數隨機變數、隨機程序與訊號處理中反覆出現。
+              </p>
+            </article>
+
+            <article id="problems" class="lesson-section lesson-summary">
+              <span class="lesson-number">Problems</span>
+              <h3>Practice Problems</h3>
+              <p>
+                練習題應優先掌握三類能力：由 CDF 或 PDF 計算機率與期望值、辨識常見連續分布的工程意義，以及處理隨機變數轉換與基本可靠度問題。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Probability 2026 | Chapter 4</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>
